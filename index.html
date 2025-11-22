@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MysticRoots</title>
+        <link rel="stylesheet" href="css/estilo.css">
+    </head>
+<body>
+    <header>
+    <div class="logo-container">
+    <img src="img/logo2.JPG" alt="Logo" class="logo">
+    <h1>MysticRoots</h1>
+    </div>
+
+    <button id= "menu-btn" class="menu-btn">☰</button>
+
+    <div id="overlay" class="overlay"></div>
+
+    <nav id="sideMenu" class="side-menu">
+        <a href="index.html">Inicio</a>
+        <a href="Nosotros.html" class="active">Quiénes Somos</a>
+        <a href="beneficios.html">Beneficios</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <button id="btnCarrito" class="carrito-btn">
+        🛒 (<span id="contadorCarrito">0</span>)
+    </button>
+    </header>
+
+<main>
+    <h2>Productos</h2>
+    <div class="contenedor-productos" id="contenedorProductos"></div>
+</main>
+
+<div id="modalCarrito" class="modal">
+    <div class="modal-content">
+        <h3>Carrito de Compras</h3>
+        <ul id="listaCarrito"></ul>
+        <p id="total"></p>
+        <button id="cerrarCarrito" class="cerrar">Cerrar</button>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+
+<div id="toast" class="toast">Producto agregado</div>
+
+<footer class="footer">
+    <p><b>MysticRoots</b> — Productos Naturales y Espirituales</p>
+    
+    <div class="footer-redes">
+        <a href="https://www.instagram.com/mysticrootsco?igsh=MW40bXVqbWtyejYwaw==" target="_blank">Instagram</a>
+    </div>
+
+    <p class="footer-copy">© <span id="anio"></span> MysticRoots</p>
+</footer>
+</body>
+</html>

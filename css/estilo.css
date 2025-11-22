@@ -1,0 +1,334 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f1ea;
+}
+
+header {
+    background: #8d6e63;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ffddbe;
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+/* LOGO */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* PRODUCTOS*/
+
+main h2 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 24px;
+    color: #8d6e63;
+}
+
+.contenedor-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.producto {
+    background: #fff;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.producto button {
+    background: #8d6e63;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    padding: 20px;
+    z-index: 30;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    margin: auto;
+    width: 90%;
+    max-width: 450px;
+    border-radius: 10px;
+}
+
+/* CONTACTO  */
+.contacto-container {
+    max-width: 400px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.contacto-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contacto-form label {
+    font-weight: bold;
+    text-align: left;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+.contacto-form button {
+    background: #8d6e63;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.contacto-form button:hover {
+    background: #6d4c41;
+}
+
+.pagina-info {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    line-height: 1.6;
+}
+
+.pagina-info h2 {
+    text-align: center;
+    color: #6d4c41;
+    margin-bottom: 15px;
+}
+
+.lista-beneficios li {
+    background: #f8f5f0;
+    margin-bottom: 10px;
+    list-style: none;
+    border-left: 4px solid #8d6e63;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* MENÚ */
+.menu-btn {
+    font-size: 28px;
+    background: #ffb181;
+    border: none;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    border-radius: 50%;
+    padding: 8px 13px;
+    transition: 0.2s;
+}
+
+/* Hover */
+.menu-btn:hover {
+    background: #ff9966;
+}
+
+.overlay.visible {
+    display: block;
+}
+
+/* Menú lateral */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -290px;
+    width: 250px;
+    height: 100%;
+    background: #6d4c41;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: .3s ease;
+    z-index: 50;
+}
+
+.side-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.side-menu.abierto {
+    left: 0;
+}
+
+/* ESCRITORIO */
+@media (min-width: 900px) {
+    
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo-container {
+        justify-content: flex-start;
+    }
+
+/* Menú en fila */
+    .side-menu {
+        position: static;
+        flex-direction: row;
+        background: none;
+        gap: 20px;
+        height: auto;
+        width: auto;
+    }
+
+    .overlay {
+        display: none !important;
+    }
+
+    /* BOTÓN INVISIBLE EN DESKTOP */
+    .menu-btn {
+        display: none;
+    }
+}
+/* Notificación animada */
+.toast {
+    position: fixed;
+    top: 20px;
+    right: -300px;
+    background: #333;
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: right 0.5s ease;
+    z-index: 9999;
+}
+
+.toast.show {
+    right: 20px;
+}
+
+/* Botón eliminar del carrito */
+.btn-eliminar {
+    background: #e63946;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.btn-eliminar:hover {
+    background: #b71c1c;
+}
+
+.redes-sociales {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.redes-sociales a {
+    font-size: 30px;
+    margin: 0 10px;
+    color: #333;
+    transition: transform 0.2s ease, color 0.2s;
+}
+
+.redes-sociales a:hover {
+    transform: scale(1.2);
+    color: #8a5a44; 
+}
+
+.footer {
+    background: #6d4c41;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 40px;
+    font-size: 15px;
+}
+
+.footer-redes {
+    margin: 8px 0;
+}
+
+.footer-redes a {
+    color: #ffe9d6;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.footer-redes a:hover {
+    text-decoration: underline;
+}
+
+.footer-copy {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}

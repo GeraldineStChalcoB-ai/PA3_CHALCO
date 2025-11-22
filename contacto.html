@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - MysticRoots</title>
+    <link rel="stylesheet" href="css/estilo.css">
+
+    <!-- Iconos de red social -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <div class="logo-container">
+        <img src="img/logo2.JPG" class="logo" alt="Logo">
+        <h1>MysticRoots</h1>
+    </div>
+
+    <button id="menu-btn" class="menu-btn">☰</button>
+    <div id="overlay" class="overlay"></div>
+
+    <nav id="sideMenu" class="side-menu">
+        <a href="index.html">Inicio</a>
+        <a href="Nosotros.html">Quiénes Somos</a>
+        <a href="beneficios.html">Beneficios</a>
+        <a href="contacto.html" class="active">Contacto</a>
+    </nav>
+</header>
+
+<main>
+    <div class="contacto-container">
+        <h2>Contacto</h2>
+        <form class="contacto-form" id="formContacto">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" rows="4" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        <p id="confirmacion"></p>
+
+        <div class="redes-sociales">
+            <h3>Síguenos</h3>
+            <a href="https://www.facebook.com/share/1Bd8NEtvqg/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/mysticrootsco?igsh=MW40bXVqbWtyejYwaw==" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/51981157863" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </div>
+</main>
+
+<script src="js/script.js"></script>
+
+<script src="js/contacto.js"></script>
+
+<footer class="footer">
+    <p><b>MysticRoots</b> — Productos Naturales y Espirituales</p>
+    
+    <div class="footer-redes">
+        <a href="https://www.instagram.com/mysticrootsco?igsh=MW40bXVqbWtyejYwaw==" target="_blank">Instagram</a>
+    </div>
+
+    <p class="footer-copy">© <span id="anio"></span> MysticRoots</p>
+</footer>
+
+</body>
+</html>
